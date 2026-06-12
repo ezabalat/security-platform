@@ -5,9 +5,25 @@
 </head>
 <body>
 
-    <h1>Security Incident Dashboard</h1>
+<h1>Security Incident Dashboard</h1>
 
-    <p>Bienvenido a nuestra plataforma.</p>
+<h2>Incidentes</h2>
+
+<ul>
+
+{% for incident in incidents %}
+
+    <li>
+        {{ incident.title }}
+        -
+        {{ incident.severity }}
+        -
+        {{ incident.status }}
+    </li>
+
+{% endfor %}
+
+</ul>
 
 </body>
 </html>
